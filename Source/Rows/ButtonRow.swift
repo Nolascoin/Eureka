@@ -84,7 +84,7 @@ open class _ButtonRowOf<T: Equatable> : Row<ButtonCellOf<T>> {
         cell.textLabel?.textAlignment = leftAligmnment ? .left : .center
         cell.accessoryType = !leftAligmnment || isDisabled ? .none : .disclosureIndicator
         cell.editingAccessoryType = cell.accessoryType
-        cell.textLabel?.textColor = !leftAligmnment ? cell.tintColor.withAlphaComponent(isDisabled ? 0.3 : 1.0) : nil
+        cell.textLabel?.textColor = !leftAligmnment ? cell.tintColor.withAlphaComponent(isDisabled ? 0.3 : 1.0) : cell.textLabel?.textColor
     }
 
     open override func prepare(for segue: UIStoryboardSegue) {
